@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  background: #4448ff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  width: auto;
+  height: 100px;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.wrapper ul{
+  display: flex;
+  position: relative;
+}
+
+.wrapper ul li{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.wrapper ul li a{
+  color: #d0d3da;
+  display: block;
+  text-align: center; 
+}
+
+.wrapper ul li a span{
+  display: block;
+}
+
+.wrapper ul li a .icon{
+  font-size: 32px;
+  margin-bottom: 5px;
+  transition: 0.5s ease;
+}
+
+.wrapper ul li a .text{
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: 1;
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+.wrapper .pointer{
+  position: absolute;
+  bottom: 23px;
+  left: 45px;
+  width: 10px;
+  height: 10px;
+  background: #4448ff;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+.wrapper ul li.active .text{
+  opacity: 0;
+}
+
+.wrapper ul li.active .icon{
+  color: #4448ff;
+}
+
+.wrapper ul li:nth-child(1).active ~ .pointer{
+  transform: translateX(0);
+}
+
+.wrapper ul li:nth-child(2).active ~ .pointer{
+  transform: translateX(100px);
+}
+
+.wrapper ul li:nth-child(3).active ~ .pointer{
+  transform: translateX(200px);
+}
+
+.wrapper ul li:nth-child(4).active ~ .pointer{
+  transform: translateX(300px);
+}
+
+.wrapper ul li:nth-child(5).active ~ .pointer{
+  transform: translateX(400px);
+}
